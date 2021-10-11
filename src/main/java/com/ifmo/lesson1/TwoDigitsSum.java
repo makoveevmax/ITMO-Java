@@ -13,6 +13,7 @@ public class TwoDigitsSum {
         System.out.println(sum);
     }
 
+
     public static int sum(int n) {
         int sum = 0;
         while (n > 0) {
