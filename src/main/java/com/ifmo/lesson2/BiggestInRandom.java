@@ -17,7 +17,7 @@ public class BiggestInRandom {
     }
 
     public static int threeDigitRandom() {
-        var random = Math.random() * 100;
+        var random = Math.random() * 900 +100;
 
         return (int) random;
     }
