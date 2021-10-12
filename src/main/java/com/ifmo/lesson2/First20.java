@@ -6,9 +6,9 @@ public class First20 {
      16 32 64 128 ….
      */
     public static void main(String[] args) {
-        long number = 2;
-        for (long i = 1; i < 20; i++) {
-            System.out.print ((( Math.pow(number, i) + " ")));
+        int number = 2;
+        for (int i = 1; i <= 20; i++) {
+            System.out.print ((((int) Math.pow(number, i) + " ")));
         }
     }
 }
