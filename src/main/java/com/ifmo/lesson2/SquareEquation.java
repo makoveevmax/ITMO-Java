@@ -23,15 +23,16 @@ public class SquareEquation {
      */
     public static double[] squareEquationRoots(double a, double b, double c) {
         double result = Math.pow(b, 2) - 4.0 * a * c;
-        double roots[] = new double[3];
+        double roots[] = new double[2];
         if (result > 0d) {
             roots[0] = (-b + Math.pow(result, 0.5)) / (2.0 * a);
             roots[1] = (-b - Math.pow(result, 0.5)) / (2.0 * a);
+            return  roots;
         } else if (result == 0d) {
-            roots[2] = -b / (2.0 * a);
+            roots[0] = -b / (2.0 * a);
+            return  roots;
         } else {
             return null;
         }
-        return roots;
     }
 }
