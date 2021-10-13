@@ -31,6 +31,7 @@ public class UnevenArray {
         System.out.println(Arrays.toString(inverted));
 
 
-        return new int[0];
+        System.exit(0);
+        return null;
     }
 }
