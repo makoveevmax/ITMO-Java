@@ -1,6 +1,7 @@
 package com.ifmo.lesson3;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class UnevenArray {
     /*
@@ -21,15 +22,15 @@ public class UnevenArray {
             array[i] = count;
             count += 2;
         }
+        int[] array2 = Arrays.copyOf(array, 50);
 
-        System.out.println(Arrays.toString(array));
-
-        for (int i =0; i < array.length/2; i++) {
-            int temp =  array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
+        for (int i =0; i < array2.length/2; i++) {
+            int temp =  array2[i];
+            array2[i] = array2[array2.length - 1 - i];
+            array2[array2.length - 1 - i] = temp;
         }
-        return array;
+
+        return IntStream.concat(Arrays.stream(array), Arrays.stream(array2)).toArray();
     }
 }
 
