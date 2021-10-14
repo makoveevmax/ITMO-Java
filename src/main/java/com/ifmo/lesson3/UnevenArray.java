@@ -1,6 +1,9 @@
 package com.ifmo.lesson3;
 
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 public class UnevenArray {
     /*
     Создайте массив из всех нечётных чисел от 1 до 99, выведите его на экран в строку, а затем
@@ -9,6 +12,8 @@ public class UnevenArray {
      */
     public static void main(String[] args) {
         int[] unevenArray = unevenArray();
+        System.out.println(Arrays.toString(unevenArray).replaceAll("[\\[\\]\\,]", ""));
+
     }
 
     public static int[] unevenArray() {
@@ -20,7 +25,6 @@ public class UnevenArray {
         for (i = 0; i < n; i++) {
             array[i] = count;
             count += 2;
-            System.out.print(array[i] + " ");
 
         }
         for (i = 0; i < n; i++, n--) {
@@ -30,7 +34,6 @@ public class UnevenArray {
 
         }
         for (i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
         }
         return array;
     }
