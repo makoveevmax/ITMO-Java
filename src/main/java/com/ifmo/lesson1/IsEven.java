@@ -9,6 +9,7 @@ public class IsEven {
         int n = 24;
 
 
+
         System.out.println(isEven(n));
     }
 
