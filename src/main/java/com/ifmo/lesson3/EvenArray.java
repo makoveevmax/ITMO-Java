@@ -33,7 +33,6 @@ public class EvenArray {
         for (i = 0; i < 10; i++) {
             System.out.println(array[i]);
         }
-        System.exit(0);
         return null;
     }
 }
