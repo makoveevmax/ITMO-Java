@@ -30,7 +30,7 @@ public class UnevenArray {
             array2[array2.length - 1 - i] = temp;
         }
 
+
         return IntStream.concat(Arrays.stream(array), Arrays.stream(array2)).toArray();
     }
 }
-
