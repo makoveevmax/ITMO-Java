@@ -16,13 +16,18 @@ public class Count2 {
 
     public static int count2() {
         int count = 0;
-        for (double i = 0.0001; i < 5.0000d; i+=0.0001) {
-            String str = String.valueOf(i);
-            if (str.contains("2")){
-                count++;
+        int temp;
+        for (int i = 1; i <= 50000; i++) {
+            int j = i;
+            while (j > 0) {
+                temp = j % 10;
+                if (temp == 2) {
+                    count++;
+                    j = 0;
+                }
+                j /= 10;
             }
         }
-
         return count;
     }
 }
