@@ -24,6 +24,7 @@ public class DigitsSum {
             n = n / 10;
         }
 
+
         return sum;
     }
 }

@@ -16,6 +16,7 @@ public class BiggestInRandom {
         System.out.println(largestDigit);
     }
 
+
     public static int threeDigitRandom() {
         var random = Math.random() * 900 +100;
 

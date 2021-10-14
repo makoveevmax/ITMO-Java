@@ -22,6 +22,7 @@ public class Count2 {
                 count++;
             }
         }
+
         return count;
     }
 }
