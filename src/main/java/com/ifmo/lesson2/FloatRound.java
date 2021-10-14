@@ -8,6 +8,7 @@ public class FloatRound {
     public static void main(String[] args) {
         float n = 12.4F;
 
+
         float rounded = round(n);
 
         System.out.println(rounded);

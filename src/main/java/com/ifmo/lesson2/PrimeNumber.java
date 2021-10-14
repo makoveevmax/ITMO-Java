@@ -28,3 +28,4 @@ public class PrimeNumber {
         return bigInteger.isProbablePrime(100);
     }
 }
+

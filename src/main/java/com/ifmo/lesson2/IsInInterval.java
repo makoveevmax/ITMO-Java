@@ -30,3 +30,4 @@ public class IsInInterval {
         return "Число " + rnd + " не содержится в интервале (25,100)";
     }
 }
+
