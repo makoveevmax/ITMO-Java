@@ -11,7 +11,8 @@ public class Fibonacci20 {
     public static void main(String[] args) {
         int[] fibonacciNumbers = fibonacciNumbers();
 
-        System.out.println(Arrays.toString(fibonacciNumbers));
+        System.out.println(Arrays.toString(fibonacciNumbers).replaceAll("[\\[\\]]", ""));
+
     }
 
     public static int[] fibonacciNumbers() {
