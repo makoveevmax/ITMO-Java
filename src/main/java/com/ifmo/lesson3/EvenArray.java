@@ -9,8 +9,6 @@ public class EvenArray {
      */
     public static void main(String[] args) {
         int[] evenArray = evenArray();
-
-        System.out.println(evenArray);
     }
 
     public static int[] evenArray() {
@@ -33,7 +31,7 @@ public class EvenArray {
         for (i = 0; i < 10; i++) {
             System.out.println(array[i]);
         }
-        return null;
+        return array;
     }
 }
 
