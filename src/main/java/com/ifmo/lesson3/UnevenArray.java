@@ -25,6 +25,7 @@ public class UnevenArray {
         for (i = 0; i < n; i++) {
             array[i] = count;
             count += 2;
+            System.out.print(array[i] + " ");
 
         }
         for (i = 0; i < n; i++, n--) {
