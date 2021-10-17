@@ -1,6 +1,6 @@
 package com.ifmo.lesson3;
 
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -12,30 +12,22 @@ public class UnevenArray {
      */
     public static void main(String[] args) {
         int[] unevenArray = unevenArray();
-        System.out.println(Arrays.toString(unevenArray).replaceAll("[\\[\\]\\,]", ""));
+        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder1 = new StringBuilder();
 
+        IntStream.range(0, unevenArray.length).forEach(i -> stringBuilder.append(unevenArray[i]).append(" "));
+        IntStream.iterate(unevenArray.length - 1, i -> i >= 0, i -> i - 1)
+                .forEach(i -> stringBuilder1.append(unevenArray[i]).append(" "));
+        for (StringBuilder builder : Arrays.asList(stringBuilder, stringBuilder1)) {
+            System.out.println(builder.toString().trim());
+        }
     }
 
     public static int[] unevenArray() {
-        int n = 50;
-        int count = 1;
-        int temp, i;
-
-        int array[] = new int[n];
-        for (i = 0; i < n; i++) {
-            array[i] = count;
-            count += 2;
-            System.out.print(array[i] + " ");
-
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i = 1; i < 100; i += 2) {
+            list.add(i);
         }
-        for (i = 0; i < n; i++, n--) {
-            temp = array[i];
-            array[i] = array[n - 1];
-            array[n - 1] = temp;
-
-        }
-        for (i = 0; i < array.length; i++) {
-        }
-        return array;
+        return list.stream().mapToInt(integer -> integer).toArray();
     }
 }
